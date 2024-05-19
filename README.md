@@ -1,4 +1,5 @@
 # Pyras.ai Frontend
 
-npm i
-npm run dev
+- RUN - 
+#npm i
+#npm run dev
