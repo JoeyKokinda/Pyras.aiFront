@@ -1,0 +1,32 @@
+/* Add this to your CSS file */
+.dash-navbar {
+    position: fixed; /* Fixed sidebar (stay in place on scroll) */
+    height: 100%; /* Full height */
+    width: 240px; /* Set the width of the sidebar */
+    z-index: 1; /* Stay on top of everything */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+}
+
+.dash-navbar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+}
+
+.dash-navbar a:hover {
+    color: #f1f1f1;
+}
+
+/* Style the content */
+.dash-content {
+    margin-left: 240px; /* Same as the width of the sidebar */
+    padding: 20px;
+}
+
+

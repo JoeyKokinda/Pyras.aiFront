@@ -1,0 +1,917 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root {
+    --dddorg: #421b00;
+    --ddorg: #8B4000;
+    --dorg: #fd5000;
+    --org: #ff6404;
+    --lorg: #ff9b31;
+    --llorg: #ffbe5c;
+    --white: #fff;
+    --grey: #202020;
+    --dgrey: #181818;
+    --black: #000;
+
+}
+
+
+
+
+
+
+
+/* Home (landing) page */
+
+.home-page {
+    min-height: 150vh;
+    background-color: var(--black);
+    overflow-y: auto;
+}
+
+.section1 {
+    background-image: url('/Wavebackground.svg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: right;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); 
+    grid-template-rows: repeat(4, auto); 
+    gap: 20px; 
+    grid-template-areas:
+        ". . . . ."
+        "Text Text . Pyrmid Pyrmid"
+        "Text Text . Pyrmid Pyrmid"
+        ". . . . .";
+}
+
+.Text {
+    grid-area: Text;
+    text-align: left;
+    height: 100%;
+    background-color: #131313;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 1em;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+
+.Pyrmid {
+    grid-area: Pyrmid;
+}
+
+.title-section {
+    text-align: center; 
+    margin-bottom: 15em;
+    padding-top: -40%;
+    color: var(--org); 
+    text-align: left;
+
+}
+
+
+
+@keyframes move {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+.title {
+    display: inline;
+    color: var(--org);
+    background: linear-gradient(to right, var(--org) 25%, #ffa84a 50%, var(--org) 75%);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    font-weight: bold;
+    animation: move 5s linear infinite;
+    animation-fill-mode: forwards;
+    font-size: 3em;
+}
+
+.undertitle {
+    color: rgb(255, 255, 255);
+    margin-top: 0.5em;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.title, .undertitle {
+    display: block;
+}
+
+
+.section1py {
+    text-align: right;
+    flex: 0 2 auto; 
+    margin-left: auto;
+}
+
+.section1py img {
+    max-width: 80%;
+    height: auto;
+}
+
+
+.secButton1 {
+    background: var(--dddorg);
+    color: var(--white);
+    letter-spacing: 0.1em;
+    padding: 10px 30px;
+    transition: 0.5s;
+    z-index: 1;
+    width: auto; 
+    border-color: white;
+    margin-bottom: 1.5em;
+}
+
+
+.secButton1:hover {
+    background: var(--ddorg);
+}
+
+
+
+
+
+
+/* Section 2 */
+
+.section2 {
+    height: 115vh;
+    background: rgb(255,155,47);
+    background: linear-gradient(182deg, rgba(255,155,47,1) 15%, rgba(240,121,0,1) 53%, rgba(211,81,0,1) 80%);
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.container-sec2 {  
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 5em 1em;
+    grid-template-areas:
+      ". Rentimg Rentimg . RentContent RentContent RentContent RentContent ."
+      ". HostContent HostContent HostContent HostContent . Hostimg Hostimg .";
+}
+
+.Renttitle { grid-area: Renttitle; }
+.Hosttitle { grid-area: Hosttitle; }
+
+
+.HostContent { 
+    grid-area: HostContent;
+    text-align: left;
+    background-color: var(--ddorg);
+    padding: 30px;
+    border-radius: 5px;
+ }
+
+
+.RentContent { 
+    grid-area: RentContent; 
+    text-align: left;
+    background-color: var(--ddorg);
+    padding: 30px;
+    border-radius: 5px;
+    border: 2px white;
+
+}
+
+
+.Rentimg { 
+    grid-area: Rentimg;
+}
+
+.Hostimg { 
+    grid-area: Hostimg; 
+}
+
+
+.Rentimg, .Hostimg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.Hosttitle h2,
+.Renttitle h2 {
+    color: var(--white);
+    font-size: 2em;
+
+}
+
+
+.buttons-container {
+    display: flex;
+    gap: 20px;
+    justify-content: start;
+}
+
+
+
+.secButton {
+    background: #2600ff25;
+    color: var(--white);
+    letter-spacing: 0.1em;
+    padding: 10px 30px;
+    transition: 0.5s;
+    z-index: 1;
+    width: auto; 
+    border-color: white;
+}
+
+
+.secButton:hover {
+    background: #2600ff46;
+}
+
+
+.mainbutton {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--black);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    padding: 10px 30px;
+    transition: 0.5s;
+    z-index: 1;
+    padding: 10px 30px;
+    width: auto;
+}
+
+.mainbutton:hover {
+    background: var(--black);
+    /* letter-spacing: 0.5em; */
+    /* box-shadow: 0 0 35px var(--black); */
+}
+   
+.mainbutton:before {
+    content : '';
+    position: absolute;
+    inset: 3px;
+    background: var(--ddorg);
+}
+
+.mainbutton span {
+    position: relative;
+    z-index: 1;
+}
+
+.mainbutton i{
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+
+.mainbutton i::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 80%;
+    width: 10px;
+    height: 4px;
+    background: var(--ddorg);
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+
+a:hover i::before{
+    width: 20px;
+    left: 20%;
+}
+
+.mainbutton i::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 10px;
+    height: 4px;
+    background: var(--ddorg);
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+
+a:hover i::after{
+    width: 20px;
+    left: 80%;
+}
+
+
+
+/* important */
+.sketch {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+
+
+
+
+/* Section 3 */
+
+.section3 {
+    height: 100vh; 
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5em; 
+    background-image: url('/sec3back.svg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+}
+
+.sec3title h1 {
+    color: var(--white);
+    /* margin-top: 1em; */
+    margin-bottom: 2em;
+}
+
+
+
+
+
+.price-table-container {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border: 5px; 
+}
+
+.grid-container {
+  display: grid; 
+  grid-template-columns: 0.75fr 1fr 0.75fr; 
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    ". pyras ."
+    "model pyras competitors"
+    "data data data"
+    "data data data"
+    "data data data"
+    "data data data"
+    "data data data"; 
+}
+
+.pyras img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    padding: 1em;
+}
+
+.pyras { 
+    grid-area: pyras; 
+    display: flex;
+    border: 2px solid rgb(255, 255, 255); 
+    border-radius: 15px 15px 0 0;
+}
+
+.model { 
+    grid-area: model; 
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border: 2px solid var(--white);
+    height: auto;
+    /* object-fit: contain; */
+    font-weight: bold;
+    font-size: 1.5em;
+    border-radius: 15px 0 0 0;
+}
+
+.model span {
+    height: 3rem;
+    line-height: 3rem;
+}
+
+.competitors span {
+    height: 3rem;
+    line-height: 3rem;
+}
+
+
+.competitors { 
+    grid-area: competitors; 
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border: 2px solid rgba(255, 255, 255, 0.795);
+    text-align: center;
+    height: auto;
+    object-fit: contain;
+    font-weight: bold;
+    font-size: 1.5em;
+    border-radius: 0 15px 0 0;
+}
+
+
+.data {
+    display: grid; 
+    grid-template-columns: 0.75fr 1fr 0.75fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      ". . ."
+      ". . ."
+      ". . ."
+      ". . ."
+      ". . ."; 
+    grid-area: data; 
+    border-bottom: 4px solid #fff;
+    border-radius: 0 0 5px 5px;
+}
+
+.grid-item {
+    padding: 1em;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.795);
+    background-color: transparent;
+    border-right: 2px solid rgba(255, 255, 255);
+    border-left: 2px solid rgba(255, 255, 255);
+}
+
+
+
+@keyframes moving-glare {
+    0% {
+      background-position: 200% 0; 
+    }
+    100% {
+      background-position: -200% 0; 
+    }
+  }
+  
+  .glare-effect {
+    background: linear-gradient(
+      to right,
+      var(--dorg) 0%, 
+      var(--org) 25%,
+      var(--lorg) 50%, 
+      var(--org) 75%, 
+      var(--dorg) 100% 
+    );
+    background-size: 200% 200%; 
+    animation: moving-glare 10s infinite linear; 
+  }
+  
+  
+
+
+
+
+
+
+
+/* Section 4 */
+.section4 {
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    text-align: center;
+    padding: 2em;
+    box-sizing: border-box; 
+    background-image: url('/sec4back.svg');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+}
+
+
+.border-wrap-outer, .border-wrap-inner, .border-wrap-last{
+    position: relative;
+    border-radius: 15px; 
+    padding: 10px; 
+    background: transparent;
+}
+
+.border-wrap-last {
+    border: 2px solid var(--ddorg); /* last border */
+}
+
+.border-wrap-outer {
+    border: 2px solid var(--org); /* First border */
+}
+
+.border-wrap-inner {
+    border: 2px solid var(--dorg); /* Second border */
+}
+
+.section4 .contact {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    padding: 2em;
+    max-width: 800px;
+    width: 100%;
+    color: #fff;
+    box-shadow: 0 0 0 2px var(--lorg) inset; /* Innermost border */
+}
+
+
+.section4 h2 {
+    color: #ff6404;
+    margin-bottom: 1em;
+}
+
+.section4 p {
+    margin-bottom: 1em;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.email-button {
+    background: #ff6404; 
+    color: #000; 
+    border: 5px;
+    border-color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 1px; 
+}
+
+.email-button:hover {
+    background: #e55a00; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--org);
+    border-radius: 10px; 
+    border: 2px solid rgba(0, 0, 0, 0.5); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--lorg); 
+}
+
+
+
+/* Navbar */
+
+.nav {
+    z-index: 1000;
+    margin-bottom: 0.5em;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 1em;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    padding: 1em;
+    background-color: var(--black);
+    box-shadow: 0 0 30px var(--grey);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+        "logo cent cent cent login"; 
+}
+
+/* logo */
+
+.logo {
+    align-self: flex-start;
+    width: 10em;
+    grid-area: logo;
+    margin-left: 55%;
+}
+
+
+
+.cent-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    gap: 2em;
+    grid-area: cent;
+}
+
+.home-nav, .about-nav, .contact-nav {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+
+/* navbar item and animation under it */
+
+.nav-item {
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none; 
+    z-index: 0;
+}
+
+.nav-item span {
+    position: relative;
+    display: inline-block;
+}
+
+.nav-item span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+    width: 0;
+    height: 2px;
+    background-color: var(--org);
+    transition: width 0.3s ease-out;
+    box-shadow: 0 0 8px var(--org); 
+} 
+
+.nav-item:hover span::after {
+    width: 100%; 
+}
+
+/* Login button */
+
+.login-button {
+    position: relative;
+    background: #fff;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 400;
+    padding: 10px 30px;
+    transition: 0.5s;
+    background: var(--org);
+    margin-right: 55%;
+}
+
+.login-button-container {
+    grid-area: login;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
+.login-button:hover {
+    background: var(--org);
+    /*color: var(--org);*/
+    /* box-shadow: 0 0 35px var(--org); */
+}
+
+.login-button:before {
+    content : '';
+    position: absolute;
+    inset: 2px;
+    background: var(--black);
+}
+
+.login-button span {
+    position: relative;
+    z-index: 1;
+}
+
+.login-button i {
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+
+.login-button i::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 80%;
+    width: 10px;
+    height: 4px;
+    background: var(--black);
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+
+.login-button:hover i::before {
+    width: 20px;
+    left: 20%;
+}
+
+.login-button i::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 10px;
+    height: 4px;
+    background: var(--black);
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+
+.login-button:hover i::after {
+    width: 20px;
+    left: 80%;
+}
+
+
+
+
+
+/* Animated Button ---- button1 */
+
+.button1 {
+    position: relative;
+    background: #fff;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    padding: 10px 30px;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.button1:hover {
+    background: var(--org);
+    color: var(--org);
+    /* letter-spacing: 0.5em; */
+    box-shadow: 0 0 35px var(--org);
+}
+   
+.button1:before {
+    content : '';
+    position: absolute;
+    inset: 2px;
+    background: var(--grey);
+}
+
+.button1 span {
+    position: relative;
+    z-index: 1;
+}
+
+.button1 i{
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+
+.button1 i::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 80%;
+    width: 10px;
+    height: 4px;
+    background: var(--grey);
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+
+a:hover i::before{
+    width: 20px;
+    left: 20%;
+}
+
+.button1 i::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 10px;
+    height: 4px;
+    background: var(--grey);
+    transform: translateX(-50%) skewX(325deg);
+    transition: 0.5s;
+}
+
+a:hover i::after{
+    width: 20px;
+    left: 80%;
+}
+
+
+
+
+
+
+
+
+
+/* Login Page */
+.login-page {
+    min-height: calc(100vh - 2em);
+    background-color: var(--black);
+}
+
+
+.login-bubble {
+    max-width: 350px;
+    padding: 30px;
+    background: var(--black);
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 
+        -40px 30px 300px rgba(7, 109, 243, 0.2),  
+        40px -30px 500px rgba(111, 30, 255, 0.5);  
+}
+
+
+.login-bubble label,
+.login-bubble input {
+    display: block;
+    width: 100%;
+}
+
+.login-bubble label {
+    text-align: left;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.login-bubble input[type="text"],
+.login-bubble input[type="password"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.login-bubble input[type="submit"] {
+    font-size: 1em;
+    padding: 10px 30px;
+    background: var(--org);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 15px var(--lorg);
+    transition: all 0.3s ease;
+}
+
+.login-bubble input[type="submit"]:hover {
+    box-shadow: 0 0 25px var(--lorg);
+    background: #fff;
+    color: var(--org);
+}
+
+
